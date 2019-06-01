@@ -14,14 +14,20 @@ let names = [ 'Amir', 'Paul', 'Ritik', 'Himanshi', 'Sanoop Sha', 'Dikshant', 'Li
               'Shubhamjit', 'Priyal', 'Martin', 'Vikas', 'Yashaswi'];
 
 
+
 function myFunction() {
 let choice = position.value ;
 	if (choice === 'Staff') {
-		para.textContent = 'Hello Jessica !' ;
+		para.textContent = document.write("Jessica Gilfillan");
 		console.log(choice);
 	} else if (choice === 'Student') {
-		para.textContent = names ;
-		console.log(choice);
+		para.textContent = names.forEach(function(name) {
+			var txt = "<br>"
+			txt += name ;
+			document.write(txt) ;
+		});
+
+		
 	}
 	else {
 		para.textContent = '';
